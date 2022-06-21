@@ -48,7 +48,6 @@ const Index = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 });
 const Show = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log(req.params.id);
         const user = yield store.Show(req.params.id);
         res.json(user);
     }

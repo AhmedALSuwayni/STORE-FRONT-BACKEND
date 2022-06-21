@@ -19,3 +19,4 @@ app.use(body_parser_1.default.json());
 app.listen(5000, function () {
     console.log(`The URL Address: ${address}`);
 });
+exports.default = app;

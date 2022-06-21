@@ -50,7 +50,6 @@ const AddProduct = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     const orderId = data.orderId;
     const productId = data.productId;
     const quantity = data.quantity;
-    console.log(orderId, productId, quantity);
     try {
         const addedProduct = yield store.AddProduct(quantity, orderId, productId);
         res.json(addedProduct);

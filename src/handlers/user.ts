@@ -17,7 +17,6 @@ const Index =async(req: express.Request,res: express.Response) =>{
 
 const Show = async (req: express.Request, res: express.Response) => {
     try {
-      console.log(req.params.id)
       const user = await store.Show(req.params.id);
       res.json(user);
     } catch (error) {

@@ -43,7 +43,6 @@ const AddProduct = async (req: express.Request, res: express.Response) => {
   const orderId: string = data.orderId;
   const productId: string = data.productId;
   const quantity: number = data.quantity;
-  console.log(orderId,productId,quantity);
   try {
     const addedProduct = await store.AddProduct(quantity, orderId, productId);
     res.json(addedProduct);
