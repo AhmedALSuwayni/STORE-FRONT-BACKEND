@@ -11,6 +11,12 @@ describe("Check The Respone in Product Module", (): void =>{
         });
         expect(res).toBeTrue;
     })
+    
+    it("Checking Show Product", async (): Promise<void> => {
+        const id : number = 1;
+        const res = await store.Show(id);
+        expect(res).toBeDefined;
+    })
 
     it("Checking All Products", async (): Promise<void> => {
         const res = await store.Index();

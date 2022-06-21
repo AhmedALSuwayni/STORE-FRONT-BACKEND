@@ -20,6 +20,11 @@ describe("Check The Respone in User Module", () => {
         });
         expect(res).toBeDefined;
     }));
+    it("Checking Show User", () => __awaiter(void 0, void 0, void 0, function* () {
+        const id = '4';
+        const res = yield store.Show(id);
+        expect(res).toBeDefined;
+    }));
     it("Checking All Users", () => __awaiter(void 0, void 0, void 0, function* () {
         const res = yield store.Index();
         expect(res).toBeDefined;

@@ -27,7 +27,9 @@ exports.authenticateToken = void 0;
 const jwt = __importStar(require("jsonwebtoken"));
 const authenticateToken = (req, res, next) => {
     try {
-        jwt.verify(req.body.token, process.env.TOKEN_SECRET);
+        const authorizationHeader = req.headers.authorization;
+        const token = authorizationHeader.split(' ')[1];
+        jwt.verify(token, process.env.TOKEN_SECRET);
         next();
     }
     catch (err) {

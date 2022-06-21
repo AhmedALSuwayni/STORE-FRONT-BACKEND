@@ -20,6 +20,11 @@ describe("Check The Respone in Product Module", () => {
         });
         expect(res).toBeTrue;
     }));
+    it("Checking Show Product", () => __awaiter(void 0, void 0, void 0, function* () {
+        const id = 1;
+        const res = yield store.Show(id);
+        expect(res).toBeDefined;
+    }));
     it("Checking All Products", () => __awaiter(void 0, void 0, void 0, function* () {
         const res = yield store.Index();
         expect(res).toBeDefined;
