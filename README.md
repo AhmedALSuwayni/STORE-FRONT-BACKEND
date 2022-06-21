@@ -23,6 +23,7 @@ Create Database and User with these Values:
 - `Database Name = Ahmad`
 - `User Name = Ahmad`
 - `user Password = 123456`
+- `command: GRANT ALL PRIVILEGES ON DATABASE Ahmad TO Ahmad`
 ### Migration To Create The Tables
 - `npm install` to install all dependencies
 - `npx db-migrate up` to create the tables
