@@ -18,6 +18,8 @@ TOKEN_SECRET=AHMEDToken
 
 ### Setup The database
 By using `Postgresql` Creating database
+You Can download Postgresql from this link and choose the operating system desired https://www.postgresql.org/download/
+Create Database and User with these Values:
 - `Database Name = Ahmad`
 - `User Name = Ahmad`
 - `user Password = 123456`
