@@ -12,6 +12,7 @@ const order_1 = __importDefault(require("./handlers/order"));
 const app = (0, express_1.default)();
 const address = 'http://localhost:5000';
 app.use((0, cors_1.default)({ origin: "*" }));
+app.use('/images', express_1.default.static('images'));
 app.use(body_parser_1.default.json());
 (0, user_1.default)(app);
 (0, product_1.default)(app);

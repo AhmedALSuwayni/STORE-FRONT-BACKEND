@@ -9,11 +9,12 @@ const app: express.Application = express()
 const address: string = 'http://localhost:5000';
 
 app.use(cors({origin:"*"}))
-
+app.use('/images',express.static('images'));
 app.use(bodyParser.json())
 user_routes(app);
 products_routes(app);
 order_routes(app);
+
 
 app.listen(5000, function () {
     console.log(`The URL Address: ${address}`)

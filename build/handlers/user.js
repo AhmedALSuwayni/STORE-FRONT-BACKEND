@@ -94,10 +94,14 @@ const signin = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.json({ error });
     }
 });
+const DecodedToken = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.send(res.locals.decoded.user);
+});
 const user_routes = (app) => {
     app.get('/users', tokenAuthentication_1.authenticateToken, Index);
     app.get('/users/:id', tokenAuthentication_1.authenticateToken, Show);
     app.post('/signin', signin);
     app.post('/signup', Create);
+    app.get("/user/decoded", tokenAuthentication_1.authenticateToken, DecodedToken);
 };
 exports.default = user_routes;

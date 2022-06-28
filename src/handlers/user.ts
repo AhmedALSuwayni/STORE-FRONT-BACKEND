@@ -64,11 +64,19 @@ const Show = async (req: express.Request, res: express.Response) => {
       res.json({ error });
     }
   };
+
+  const DecodedToken = async (req: express.Request, res: express.Response) => {
+    res.send(res.locals.decoded.user);
+}
+
   const user_routes = (app: express.Application) => {
     app.get('/users', authenticateToken, Index);
     app.get('/users/:id', authenticateToken, Show);
     app.post('/signin', signin);
     app.post('/signup', Create);
+    app.get("/user/decoded", authenticateToken, DecodedToken);
   };
   
   export default user_routes;
+
+
